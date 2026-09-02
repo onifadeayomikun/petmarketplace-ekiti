@@ -1,7 +1,7 @@
 import axios, { AxiosError } from 'axios';
 import toast from 'react-hot-toast';
 
-const baseURL = (import.meta.env.VITE_API_URL as string) || 'http://localhost:5000/api';
+const baseURL = (import.meta.env.VITE_API_URL as string) || '/api';
 
 export const api = axios.create({ baseURL, timeout: 20000 });
 
