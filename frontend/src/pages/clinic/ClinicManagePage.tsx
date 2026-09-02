@@ -32,7 +32,7 @@ export default function ClinicManagePage() {
 
   const { register, handleSubmit, reset, formState: { errors } } = useForm<ProfileForm>({
     defaultValues: {
-      name: '', description: '', address: '', town: 'Ibafo', phone: '', email: '',
+      name: '', description: '', address: '', town: 'Ikerre', phone: '', email: '',
       latitude: '', longitude: '',
     },
   });
@@ -52,7 +52,7 @@ export default function ClinicManagePage() {
       name: clinic.name ?? '',
       description: clinic.description ?? '',
       address: clinic.address ?? '',
-      town: clinic.town ?? 'Ibafo',
+      town: clinic.town ?? 'Ikerre',
       phone: clinic.phone ?? '',
       email: clinic.email ?? '',
       latitude: clinic.latitude != null ? String(clinic.latitude) : '',
@@ -170,7 +170,7 @@ export default function ClinicManagePage() {
   return (
     <PageShell
       title={isEdit ? 'Clinic profile' : 'Register your clinic'}
-      subtitle={isEdit ? 'Keep your clinic details up to date for pet owners.' : 'Tell pet owners around Ibafo about your clinic.'}
+      subtitle={isEdit ? 'Keep your clinic details up to date for pet owners.' : 'Tell pet owners around Ikerre & Ekiti about your clinic.'}
       actions={isEdit ? <StatusPill status={clinic.status} /> : undefined}
     >
       {isEdit && clinic.status === 'PENDING' && (
@@ -186,7 +186,7 @@ export default function ClinicManagePage() {
             <Building2 className="h-5 w-5 text-brand-600" /> Basic details
           </h2>
           <Input
-            label="Clinic name" id="name" placeholder="e.g. Ibafo Veterinary Centre"
+            label="Clinic name" id="name" placeholder="e.g. Ikere Veterinary Centre"
             error={errors.name?.message}
             {...register('name', { required: 'Clinic name is required' })}
           />

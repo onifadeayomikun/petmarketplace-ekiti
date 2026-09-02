@@ -1,4 +1,4 @@
-# REST API Reference — VetConnect Ibafo
+# REST API Reference — VetConnect Ekiti
 
 All endpoints derived directly from `backend/src/routes/index.js` and each module's
 `*.routes.js`. Routes are accurate to the codebase.
@@ -216,7 +216,7 @@ curl -X POST http://localhost:5000/api/auth/register \
     "email": "ada@example.com",
     "password": "Password123",
     "role": "OWNER",
-    "location": "Ibafo"
+    "location": "Ikerre"
   }'
 ```
 
@@ -230,7 +230,7 @@ curl -X POST http://localhost:5000/api/auth/login \
 
 ### List clinics (filtered)
 ```bash
-curl "http://localhost:5000/api/clinics?town=Mowe&emergency=true&sort=rating&page=1&limit=20"
+curl "http://localhost:5000/api/clinics?town=Ikerre&emergency=true&sort=rating&page=1&limit=20"
 ```
 
 ### Book an appointment

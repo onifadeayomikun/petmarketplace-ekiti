@@ -1,4 +1,4 @@
-# Entity-Relationship Documentation — VetConnect Ibafo
+# Entity-Relationship Documentation — VetConnect Ekiti
 
 Source of truth: `backend/src/db/schema.sql` (PostgreSQL 14+, Supabase-compatible).
 
@@ -236,7 +236,7 @@ Reference table mirroring the `user_role` enum for RBAC reporting. SMALLINT PK,
 
 ### 2. `users`
 All accounts across the three roles. Key columns: `email` (UNIQUE), `password_hash`
-(bcrypt), `role`, `location` (Ibafo/Mowe/Magboro…), `is_active`, `is_email_verified`,
+(bcrypt), `role`, `location` (Ikerre/Ado-Ekiti/Igede…), `is_active`, `is_email_verified`,
 `reset_token` + `reset_token_expires` (password reset), `last_login_at`.
 **Indexes:** `LOWER(email)`, `role`. **Trigger:** `set_updated_at`.
 

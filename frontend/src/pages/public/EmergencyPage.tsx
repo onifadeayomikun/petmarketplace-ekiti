@@ -106,7 +106,7 @@ export default function EmergencyPage() {
             </h1>
             <p className="mt-3 text-rose-50/90">
               Tell us what's happening. We'll connect you with the nearest emergency-ready clinics in
-              the Ibafo &amp; Obafemi Owode area right away.
+              the Ikerre-Ekiti &amp; Ekiti State area right away.
             </p>
           </motion.div>
         </div>
@@ -179,7 +179,7 @@ export default function EmergencyPage() {
               <div>
                 <Input
                   label="Your location"
-                  placeholder="Area / landmark, e.g. Ibafo, near GRA junction"
+                  placeholder="Area / landmark, e.g. Ikerre, near College junction"
                   error={errors.location_text?.message}
                   {...register('location_text', { required: 'Please enter your location' })}
                 />

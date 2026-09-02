@@ -108,7 +108,7 @@ export default function ClinicDashboard() {
           <div>
             <h2 className="text-xl font-bold text-ink">Register your clinic to get started</h2>
             <p className="mx-auto mt-2 max-w-md text-sm text-ink-muted">
-              Set up your clinic profile so pet owners around Ibafo can find you, book appointments,
+              Set up your clinic profile so pet owners around Ikerre and Ekiti can find you, book appointments,
               and reach you in emergencies.
             </p>
           </div>
@@ -125,7 +125,7 @@ export default function ClinicDashboard() {
   return (
     <PageShell
       title={`Hi, ${clinic.name}`}
-      subtitle={`${format(new Date(), 'EEEE, d MMMM yyyy')} · ${clinic.town ?? 'Ibafo'}`}
+      subtitle={`${format(new Date(), 'EEEE, d MMMM yyyy')} · ${clinic.town ?? 'Ikerre'}`}
       actions={<StatusPill status={clinic.status} />}
     >
       {/* Stat cards */}

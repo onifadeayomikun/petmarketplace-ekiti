@@ -11,9 +11,9 @@ export default defineConfig({
       registerType: 'autoUpdate',
       includeAssets: ['favicon.svg', 'robots.txt'],
       manifest: {
-        name: 'VetConnect Ibafo',
+        name: 'VetConnect Ekiti',
         short_name: 'VetConnect',
-        description: 'Online Veterinary Service Booking & Information — Obafemi Owode, Ogun State',
+        description: 'Online Veterinary Service Booking & Information — Ekiti State, Nigeria',
         theme_color: '#0f766e',
         background_color: '#f8faf9',
         display: 'standalone',

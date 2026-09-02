@@ -9,7 +9,7 @@ import { useAuthStore } from '@/store/authStore';
 import { Button, Input, Select } from '@/components/ui';
 import AuthShell from './AuthShell';
 
-const TOWNS = ['Ibafo', 'Mowe', 'Magboro', 'Arepo', 'Ofada', 'Other'];
+const TOWNS = ['Ikerre', 'Ado-Ekiti', 'Igede', 'Ise', 'Emure', 'Ikole', 'Other'];
 
 const dashboardFor = (role: UserRole) =>
   role === 'SUPER_ADMIN' ? '/admin/dashboard' : role === 'CLINIC_ADMIN' ? '/clinic/dashboard' : '/app/dashboard';
@@ -31,7 +31,7 @@ export default function RegisterPage() {
 
   const {
     register, handleSubmit, watch, formState: { errors, isSubmitting },
-  } = useForm<FormValues>({ defaultValues: { role: 'OWNER', location: 'Ibafo' } });
+  } = useForm<FormValues>({ defaultValues: { role: 'OWNER', location: 'Ikerre' } });
 
   const onSubmit = async (values: FormValues) => {
     try {

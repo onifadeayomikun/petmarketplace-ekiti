@@ -37,7 +37,7 @@ export const env = {
     secure: String(process.env.SMTP_SECURE).toLowerCase() === 'true',
     user: process.env.SMTP_USER,
     pass: process.env.SMTP_PASS,
-    from: process.env.MAIL_FROM || 'VetConnect Ibafo <no-reply@vetconnect.ng>',
+    from: process.env.MAIL_FROM || 'VetConnect Ekiti <no-reply@vetconnect.ng>',
   },
 
   googleMapsApiKey: process.env.GOOGLE_MAPS_API_KEY || '',

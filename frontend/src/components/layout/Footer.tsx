@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import { PawPrint, MapPin } from 'lucide-react';
 
-const TOWNS = ['Ibafo', 'Mowe', 'Magboro', 'Arepo', 'Ofada', 'Sagamu Road corridor'];
+const TOWNS = ['Ikerre', 'Ado-Ekiti', 'Igede', 'Ise', 'Emure', 'Ikole'];
 
 export default function Footer() {
   return (
@@ -16,7 +16,7 @@ export default function Footer() {
           </Link>
           <p className="mt-3 max-w-xs text-sm text-ink-muted">
             Connecting animal owners and livestock farmers with trusted veterinary care across
-            Obafemi Owode Local Government Area, Ogun State.
+            Ekiti State, Nigeria.
           </p>
         </div>
 
@@ -53,8 +53,8 @@ export default function Footer() {
 
       <div className="border-t border-black/[0.06]">
         <div className="container-app flex flex-col items-center justify-between gap-2 py-5 text-xs text-ink-muted sm:flex-row">
-          <p>© {new Date().getFullYear()} VetConnect Ibafo. All rights reserved.</p>
-          <p>Obafemi Owode LGA · Ogun State · Nigeria</p>
+          <p>© {new Date().getFullYear()} VetConnect Ekiti. All rights reserved.</p>
+          <p>Ekiti State · Nigeria</p>
         </div>
       </div>
     </footer>

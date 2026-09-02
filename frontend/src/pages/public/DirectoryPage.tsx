@@ -10,7 +10,7 @@ import type { Clinic, AnimalSpecies, PageMeta } from '@/types';
 import ClinicCard from '@/components/ClinicCard';
 import { Button, Input, Select, SkeletonCard, EmptyState, Spinner } from '@/components/ui';
 
-const TOWNS = ['Ibafo', 'Mowe', 'Magboro', 'Arepo', 'Ofada', 'Sagamu Road'];
+const TOWNS = ['Ikerre', 'Ado-Ekiti', 'Igede', 'Ise', 'Emure', 'Ikole'];
 const ANIMALS: AnimalSpecies[] = ['DOG', 'CAT', 'POULTRY', 'GOAT', 'SHEEP', 'CATTLE', 'RABBIT', 'OTHER'];
 const SORTS = [
   { value: 'rating', label: 'Highest rated' },
@@ -122,7 +122,7 @@ export default function DirectoryPage() {
           >
             <h1 className="font-display text-3xl font-bold sm:text-4xl">Clinic directory</h1>
             <p className="mt-2 text-ink-muted">
-              Browse verified veterinary clinics across the Ibafo &amp; Obafemi Owode corridor.
+              Browse verified veterinary clinics across Ikerre-Ekiti &amp; Ekiti State.
             </p>
           </motion.div>
 

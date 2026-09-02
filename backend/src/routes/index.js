@@ -20,7 +20,7 @@ import analyticsRoutes from '../modules/analytics/analytics.routes.js';
 const router = Router();
 
 router.get('/health', (_req, res) =>
-  res.json({ success: true, service: 'vetconnect-ibafo-api', status: 'ok', time: new Date().toISOString() })
+  res.json({ success: true, service: 'vetconnect-ekiti-api', status: 'ok', time: new Date().toISOString() })
 );
 
 router.use('/auth', authRoutes);

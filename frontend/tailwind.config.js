@@ -12,7 +12,7 @@ export default {
           400: '#6f9d74', 500: '#4d7f53', 600: '#3a6641', 700: '#2f5235',
           800: '#28442f', 900: '#223a29', 950: '#0f1d15',
         },
-        // Accent: warm clay / terracotta (Ogun earth)
+        // Accent: warm clay / terracotta (Ekiti earth)
         sand: {
           50: '#fbf5f0', 100: '#f5e7d9', 200: '#ebccb2', 300: '#ddaa83',
           400: '#d08a5d', 500: '#c4703f', 600: '#b25a34', 700: '#94462c',

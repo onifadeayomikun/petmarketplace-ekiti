@@ -7,7 +7,7 @@ const BRAND_IMG =
   'https://images.unsplash.com/photo-1559757148-5c350d0d3c56?auto=format&fit=crop&w=1000&q=70';
 
 const PERKS = [
-  { icon: Stethoscope, text: 'Verified clinics across Ibafo & Obafemi Owode' },
+  { icon: Stethoscope, text: 'Verified clinics across Ikerre & Ekiti State' },
   { icon: ShieldCheck, text: 'Track appointments, vaccinations & records' },
   { icon: MapPin, text: 'Find nearby emergency-ready care fast' },
 ];
@@ -37,7 +37,7 @@ export default function AuthShell({ title, subtitle, children, footer }: Props) 
 
           <div>
             <h2 className="font-display text-3xl font-bold leading-tight">
-              Caring for animals across the Ogun corridor.
+              Caring for animals across Ekiti State.
             </h2>
             <ul className="mt-8 space-y-4">
               {PERKS.map((p) => (
@@ -51,7 +51,7 @@ export default function AuthShell({ title, subtitle, children, footer }: Props) 
             </ul>
           </div>
 
-          <p className="text-sm text-brand-50/60">© {new Date().getFullYear()} VetConnect Ibafo</p>
+          <p className="text-sm text-brand-50/60">© {new Date().getFullYear()} VetConnect Ekiti</p>
         </div>
       </div>
 

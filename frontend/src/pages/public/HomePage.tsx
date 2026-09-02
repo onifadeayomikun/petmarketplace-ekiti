@@ -13,13 +13,13 @@ import { Button, SkeletonCard, EmptyState } from '@/components/ui';
 const HERO_IMG =
   'https://images.unsplash.com/photo-1612531386530-97286d97c2d2?auto=format&fit=crop&w=1400&q=70';
 
-const TOWNS = ['Ibafo', 'Mowe', 'Magboro', 'Arepo', 'Ofada', 'Sagamu Road Corridor'];
+const TOWNS = ['Ikerre', 'Ado-Ekiti', 'Igede', 'Ise', 'Emure', 'Ikole'];
 
 const STEPS = [
   {
     icon: Search,
     title: 'Find a trusted clinic',
-    body: 'Search verified veterinary clinics across the Ibafo and Obafemi Owode corridor by town, service or animal type.',
+    body: 'Search verified veterinary clinics across Ikerre-Ekiti and surrounding Ekiti towns by location, service or animal type.',
   },
   {
     icon: CalendarCheck,
@@ -70,15 +70,15 @@ export default function HomePage() {
             className="max-w-2xl"
           >
             <span className="inline-flex items-center gap-2 rounded-full bg-white/10 px-3 py-1.5 text-xs font-semibold uppercase tracking-wide text-brand-100 ring-1 ring-white/15">
-              <PawPrint className="h-4 w-4" /> Serving Ibafo &amp; Obafemi Owode
+              <PawPrint className="h-4 w-4" /> Serving Ikerre &amp; Ekiti State
             </span>
             <h1 className="mt-5 font-display text-4xl font-extrabold leading-[1.08] tracking-tight sm:text-5xl lg:text-6xl">
               Quality veterinary care,
               <span className="text-brand-300"> close to home.</span>
             </h1>
             <p className="mt-5 max-w-xl text-lg leading-relaxed text-brand-50/90">
-              Find and book trusted veterinary clinics across Ibafo, Mowe, Magboro and the
-              surrounding Ogun communities — for pets, poultry and livestock alike.
+              Find and book trusted veterinary clinics across Ikerre, Ado-Ekiti, Igede and the
+              surrounding Ekiti communities — for pets, poultry and livestock alike.
             </p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
               <Link to="/directory">

@@ -39,7 +39,7 @@ export function createApp() {
 
   // ── Routes ─────────────────────────────────────────────────────────────
   app.get('/', (_req, res) =>
-    res.json({ service: 'VetConnect Ibafo API', docs: '/api/health', version: '1.0.0' })
+    res.json({ service: 'VetConnect Ekiti API', docs: '/api/health', version: '1.0.0' })
   );
   app.use('/api', apiRouter);
 

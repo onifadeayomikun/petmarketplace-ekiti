@@ -117,5 +117,5 @@ export function ErrorState({ message, onRetry }: { message?: string; onRetry?: (
 
 export const DAYS = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
 export const DAY_KEYS = ['sun', 'mon', 'tue', 'wed', 'thu', 'fri', 'sat'];
-export const TOWNS = ['Ibafo', 'Mowe', 'Magboro', 'Arepo', 'Ofada', 'Other'];
+export const TOWNS = ['Ikerre', 'Ado-Ekiti', 'Igede', 'Ise', 'Emure', 'Ikole', 'Other'];
 export const SPECIES = ['DOG', 'CAT', 'POULTRY', 'GOAT', 'SHEEP', 'CATTLE', 'RABBIT', 'OTHER'] as const;

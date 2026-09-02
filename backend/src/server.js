@@ -5,7 +5,7 @@ import { pool } from './db/pool.js';
 const app = createApp();
 
 const server = app.listen(env.port, () => {
-  console.log(`\n🐾 VetConnect Ibafo API listening on http://localhost:${env.port}`);
+  console.log(`\n🐾 VetConnect Ekiti API listening on http://localhost:${env.port}`);
   console.log(`   Environment: ${env.nodeEnv}`);
   console.log(`   Health:      http://localhost:${env.port}/api/health\n`);
 });

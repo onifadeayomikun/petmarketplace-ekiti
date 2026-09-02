@@ -1,4 +1,4 @@
-// Seeds the VetConnect Ibafo database with realistic demo data.
+// Seeds the VetConnect Ekiti database with realistic demo data.
 // Idempotent: wipes data tables (keeps `roles`) then re-inserts.
 // Usage: npm run seed
 import { pool, query } from './pool.js';
@@ -22,7 +22,7 @@ const slugify = (s) =>
     .replace(/-+/g, '-');
 
 async function seed() {
-  console.log('[seed] 🌱 Starting VetConnect Ibafo seed …');
+  console.log('[seed] 🌱 Starting VetConnect Ekiti seed …');
 
   // -------------------------------------------------------------------------
   // 0. WIPE — keep roles, truncate everything else. CASCADE handles FK order.
@@ -69,17 +69,17 @@ async function seed() {
     email: 'admin@vetconnect.ng',
     phone: '+2348030000000',
     role: 'SUPER_ADMIN',
-    location: 'Ibafo',
+    location: 'Ikerre',
   });
 
   // Clinic admins (one per clinic)
   const clinicAdmins = [
-    { full_name: 'Dr. Adewale Bello',     email: 'drbello@ibafoanimalcare.ng',   phone: '+2348031110001', location: 'Ibafo' },
-    { full_name: 'Dr. Chinwe Okafor',     email: 'drokafor@mowevetclinic.ng',    phone: '+2348031110002', location: 'Mowe' },
-    { full_name: 'Dr. Ibrahim Suleiman',  email: 'drsuleiman@magborovet.ng',     phone: '+2348031110003', location: 'Magboro' },
-    { full_name: 'Dr. Folake Adeyemi',    email: 'dradeyemi@arepopetcare.ng',    phone: '+2348031110004', location: 'Arepo' },
-    { full_name: 'Dr. Emeka Nwankwo',     email: 'drnwankwo@ofadalivestock.ng',  phone: '+2348031110005', location: 'Ofada' },
-    { full_name: 'Dr. Halima Yusuf',      email: 'dryusuf@sagamuroadvet.ng',     phone: '+2348031110006', location: 'Mowe' },
+    { full_name: 'Dr. Adewale Bello',     email: 'drbello@ikereanimalcare.ng',   phone: '+2348031110001', location: 'Ikerre' },
+    { full_name: 'Dr. Chinwe Okafor',     email: 'drokafor@adovetclinic.ng',    phone: '+2348031110002', location: 'Ado-Ekiti' },
+    { full_name: 'Dr. Ibrahim Suleiman',  email: 'drsuleiman@igedevet.ng',     phone: '+2348031110003', location: 'Igede' },
+    { full_name: 'Dr. Folake Adeyemi',    email: 'dradeyemi@isepetcare.ng',    phone: '+2348031110004', location: 'Ise' },
+    { full_name: 'Dr. Emeka Nwankwo',     email: 'drnwankwo@emurelivestock.ng',  phone: '+2348031110005', location: 'Emure' },
+    { full_name: 'Dr. Halima Yusuf',      email: 'dryusuf@ikoletownvet.ng',     phone: '+2348031110006', location: 'Ikole' },
   ];
   const adminIds = [];
   for (const a of clinicAdmins) {
@@ -88,11 +88,11 @@ async function seed() {
 
   // Owners / farmers
   const owners = [
-    { full_name: 'Tunde Bakare',     email: 'tunde.bakare@gmail.com',    phone: '+2348065550001', location: 'Ibafo' },
-    { full_name: 'Ngozi Eze',        email: 'ngozi.eze@gmail.com',       phone: '+2348065550002', location: 'Mowe' },
-    { full_name: 'Yakubu Danladi',   email: 'yakubu.danladi@gmail.com',  phone: '+2348065550003', location: 'Magboro' },
-    { full_name: 'Bisi Olatunji',    email: 'bisi.olatunji@gmail.com',   phone: '+2348065550004', location: 'Arepo' },
-    { full_name: 'Samuel Ogunleye',  email: 'samuel.ogunleye@gmail.com', phone: '+2348065550005', location: 'Ofada' },
+    { full_name: 'Tunde Bakare',     email: 'tunde.bakare@gmail.com',    phone: '+2348065550001', location: 'Ikerre' },
+    { full_name: 'Ngozi Eze',        email: 'ngozi.eze@gmail.com',       phone: '+2348065550002', location: 'Ado-Ekiti' },
+    { full_name: 'Yakubu Danladi',   email: 'yakubu.danladi@gmail.com',  phone: '+2348065550003', location: 'Igede' },
+    { full_name: 'Bisi Olatunji',    email: 'bisi.olatunji@gmail.com',   phone: '+2348065550004', location: 'Ise' },
+    { full_name: 'Samuel Ogunleye',  email: 'samuel.ogunleye@gmail.com', phone: '+2348065550005', location: 'Emure' },
   ];
   const ownerIds = [];
   for (const o of owners) {
@@ -105,115 +105,115 @@ async function seed() {
   // -------------------------------------------------------------------------
   const clinicDefs = [
     {
-      name: 'Ibafo Animal Care Centre',
+      name: 'Ikere Animal Care Centre',
       ownerIdx: 0,
-      description: 'Full-service veterinary clinic serving Ibafo and the surrounding Lagos-Ibadan Expressway communities with companion-animal and livestock care.',
-      address: '14 Lagos-Ibadan Expressway, Opposite Ibafo Town Hall, Ibafo',
-      town: 'Ibafo',
+      description: 'Full-service veterinary clinic serving Ikerre-Ekiti and surrounding communities with companion-animal and livestock care.',
+      address: '14 College Road, Opposite Ikere Town Hall, Ikerre-Ekiti',
+      town: 'Ikerre',
       phone: '+2348031110001',
-      email: 'hello@ibafoanimalcare.ng',
+      email: 'hello@ikereanimalcare.ng',
       services: ['Vaccination', 'Surgery', 'Deworming', 'Consultation', 'Emergency Care'],
       animals: ['DOG', 'CAT', 'POULTRY', 'GOAT'],
       emergency: true,
-      lat: 6.6912, lng: 3.3502,
+      lat: 7.4950, lng: 5.2310,
       status: 'APPROVED',
     },
     {
-      name: 'Mowe Veterinary Clinic',
+      name: 'Ado Veterinary Clinic',
       ownerIdx: 1,
-      description: 'Trusted neighbourhood vet clinic in Mowe offering preventive care, vaccinations and minor surgery for pets and farm animals.',
-      address: '7 Sagamu Road, Beside Mowe Garage, Mowe',
-      town: 'Mowe',
+      description: 'Trusted neighbourhood vet clinic in Ado-Ekiti offering preventive care, vaccinations and minor surgery for pets and farm animals.',
+      address: '22 Secretariat Road, Beside Fajuyi Park, Ado-Ekiti',
+      town: 'Ado-Ekiti',
       phone: '+2348031110002',
-      email: 'care@mowevetclinic.ng',
+      email: 'care@adovetclinic.ng',
       services: ['Vaccination', 'Deworming', 'Consultation', 'Poultry Health', 'Artificial Insemination'],
       animals: ['DOG', 'CAT', 'POULTRY', 'CATTLE', 'GOAT', 'SHEEP'],
       emergency: false,
-      lat: 6.8214, lng: 3.4318,
+      lat: 7.6211, lng: 5.2214,
       status: 'APPROVED',
     },
     {
-      name: 'Magboro Livestock & Pet Hospital',
+      name: 'Igede Livestock & Pet Hospital',
       ownerIdx: 2,
-      description: 'Specialised livestock and poultry health hospital in Magboro supporting smallholder farmers with herd health programmes.',
-      address: '23 Magboro Road, Off Lagos-Ibadan Expressway, Magboro',
-      town: 'Magboro',
+      description: 'Specialised livestock and poultry health hospital in Igede supporting smallholder farmers with herd health programmes.',
+      address: '15 Iyin Road, Igede-Ekiti',
+      town: 'Igede',
       phone: '+2348031110003',
-      email: 'info@magborovet.ng',
+      email: 'info@igedevet.ng',
       services: ['Poultry Health', 'Vaccination', 'Deworming', 'Artificial Insemination', 'Consultation', 'Surgery'],
       animals: ['POULTRY', 'CATTLE', 'GOAT', 'SHEEP', 'RABBIT'],
       emergency: true,
-      lat: 6.7321, lng: 3.3811,
+      lat: 7.6710, lng: 5.1320,
       status: 'APPROVED',
     },
     {
-      name: 'Arepo Pet Care Clinic',
+      name: 'Ise Pet Care Clinic',
       ownerIdx: 3,
-      description: 'Modern companion-animal clinic in Arepo focused on dogs, cats and small pets with diagnostics and grooming.',
-      address: '5 Channels TV Avenue, Arepo, Off Lagos-Ibadan Expressway',
-      town: 'Arepo',
+      description: 'Modern companion-animal clinic in Ise focused on dogs, cats and small pets with diagnostics and grooming.',
+      address: '8 Palace Way, Ise-Ekiti',
+      town: 'Ise',
       phone: '+2348031110004',
-      email: 'reception@arepopetcare.ng',
+      email: 'reception@isepetcare.ng',
       services: ['Vaccination', 'Consultation', 'Surgery', 'Deworming', 'Emergency Care'],
       animals: ['DOG', 'CAT', 'RABBIT'],
       emergency: true,
-      lat: 6.6805, lng: 3.3608,
+      lat: 7.4648, lng: 5.4244,
       status: 'APPROVED',
     },
     {
-      name: 'Ofada Livestock Veterinary Services',
+      name: 'Emure Livestock Veterinary Services',
       ownerIdx: 4,
-      description: 'Rural-focused veterinary service in Ofada providing cattle, goat and poultry health support to farming cooperatives.',
-      address: 'Km 4 Ofada Road, Ofada Community, Obafemi Owode',
-      town: 'Ofada',
+      description: 'Rural-focused veterinary service in Emure providing cattle, goat and poultry health support to farming cooperatives.',
+      address: 'Km 3 Eporo Road, Emure-Ekiti',
+      town: 'Emure',
       phone: '+2348031110005',
-      email: 'contact@ofadalivestock.ng',
+      email: 'contact@emurelivestock.ng',
       services: ['Poultry Health', 'Artificial Insemination', 'Vaccination', 'Deworming', 'Consultation'],
       animals: ['CATTLE', 'GOAT', 'SHEEP', 'POULTRY'],
       emergency: false,
-      lat: 6.9011, lng: 3.4905,
+      lat: 7.4333, lng: 5.4667,
       status: 'APPROVED',
     },
     {
-      name: 'Sagamu Road Veterinary Hospital',
+      name: 'Ikole Veterinary Hospital',
       ownerIdx: 5,
-      description: 'Mid-sized veterinary hospital along the Sagamu Road corridor offering 24/7 emergency care and full surgical theatre.',
-      address: '101 Sagamu Road, Interchange, Mowe',
-      town: 'Mowe',
+      description: 'Mid-sized veterinary hospital in Ikole offering 24/7 emergency care and full surgical theatre.',
+      address: '45 Oye Road, Ikole-Ekiti',
+      town: 'Ikole',
       phone: '+2348031110006',
-      email: 'emergency@sagamuroadvet.ng',
+      email: 'emergency@ikoletownvet.ng',
       services: ['Emergency Care', 'Surgery', 'Vaccination', 'Consultation', 'Deworming', 'Poultry Health'],
       animals: ['DOG', 'CAT', 'POULTRY', 'CATTLE', 'GOAT', 'SHEEP', 'RABBIT'],
       emergency: true,
-      lat: 6.8298, lng: 3.4401,
+      lat: 7.7981, lng: 5.5144,
       status: 'APPROVED',
     },
     {
-      name: 'Greenfield Poultry Health Centre',
+      name: 'Hillside Poultry Health Centre',
       ownerIdx: 2,
-      description: 'Dedicated poultry health centre serving commercial farms across Magboro and Ibafo with biosecurity advisory.',
-      address: '18 Greenfield Estate Road, Magboro',
-      town: 'Magboro',
+      description: 'Dedicated poultry health centre serving commercial farms across Ikerre and Ado with biosecurity advisory.',
+      address: '12 Afao Road, Ikerre-Ekiti',
+      town: 'Ikerre',
       phone: '+2348031110007',
-      email: 'farm@greenfieldpoultry.ng',
+      email: 'farm@hillsidepoultry.ng',
       services: ['Poultry Health', 'Vaccination', 'Deworming', 'Consultation'],
       animals: ['POULTRY'],
       emergency: false,
-      lat: 6.7355, lng: 3.3792,
+      lat: 7.5020, lng: 5.2380,
       status: 'PENDING',
     },
     {
-      name: 'Riverside Mobile Vet Clinic',
+      name: 'Ekiti Mobile Vet Clinic',
       ownerIdx: 0,
-      description: 'Mobile veterinary unit covering Ibafo, Arepo and surrounding estates for home consultations and farm visits.',
-      address: 'Plot 9 Riverside Estate, Ibafo (Mobile service)',
-      town: 'Ibafo',
+      description: 'Mobile veterinary unit covering Ikerre, Ado-Ekiti and surrounding towns for home consultations and farm visits.',
+      address: 'Plot 5 GRA Extension, Ikerre-Ekiti (Mobile service)',
+      town: 'Ikerre',
       phone: '+2348031110008',
-      email: 'book@riversidemobilevet.ng',
+      email: 'book@ekitimobilevet.ng',
       services: ['Consultation', 'Vaccination', 'Deworming', 'Emergency Care'],
       animals: ['DOG', 'CAT', 'GOAT', 'POULTRY'],
       emergency: true,
-      lat: 6.6878, lng: 3.3471,
+      lat: 7.4890, lng: 5.2280,
       status: 'PENDING',
     },
   ];
@@ -294,7 +294,7 @@ async function seed() {
         [
           c.id,
           v.full_name,
-          `VCN/OG/${licenseCounter++}`,
+          `VCN/EK/${licenseCounter++}`,
           v.specialization,
           `${v.full_name} is a licensed veterinarian specialising in ${v.specialization.toLowerCase()} at ${c.name}.`,
           v.status,
@@ -334,7 +334,7 @@ async function seed() {
       tags: ['rabies', 'vaccination', 'dogs'],
       body: `Rabies remains one of the most dangerous zoonotic diseases in Nigeria, and dogs are the primary source of human infection. The good news is that it is 100% preventable through vaccination.
 
-Puppies should receive their first anti-rabies vaccine at 12 weeks of age. A booster is given one year later, and thereafter the vaccine is repeated annually. In high-risk areas such as Obafemi Owode LGA, annual boosters are strongly recommended and are often required by local authorities.
+Puppies should receive their first anti-rabies vaccine at 12 weeks of age. A booster is given one year later, and thereafter the vaccine is repeated annually. In high-risk areas such as Ekiti State, annual boosters are strongly recommended and are often required by local authorities.
 
 If your dog bites a person, isolate the animal immediately and contact a veterinarian. Never abandon or kill the dog, as a 10-day observation period is the safest way to confirm whether rabies is present.
 
@@ -371,7 +371,7 @@ Vaccination must be combined with good biosecurity. Even a perfectly vaccinated 
       title: 'Poultry Farm Biosecurity: A Practical Checklist',
       excerpt: 'Simple, low-cost biosecurity measures dramatically reduce disease on small and medium poultry farms.',
       tags: ['biosecurity', 'poultry', 'farm management'],
-      body: `Biosecurity is the set of practices that stop disease from entering and spreading on your farm. For poultry keepers in Obafemi Owode and across Ogun State, good biosecurity is the difference between profit and ruin.
+      body: `Biosecurity is the set of practices that stop disease from entering and spreading on your farm. For poultry keepers in Ikerre, Ado-Ekiti and across Ekiti State, good biosecurity is the difference between profit and ruin.
 
 Control farm access. Limit visitors, and provide a footbath with disinfectant at every entrance. Workers should change into farm-only boots and clothing.
 
@@ -703,9 +703,9 @@ Keep up with parasite control — deworming and tick/flea prevention — and fee
       ownerIdx: 0,
       assignedClinicIdx: 0,
       animal_type: 'DOG',
-      symptoms: 'Dog hit by a motorcycle on the expressway, bleeding from the hind leg and unable to stand.',
-      location_text: 'Lagos-Ibadan Expressway, near Ibafo bus stop',
-      lat: 6.6915, lng: 3.3509,
+      symptoms: 'Dog hit by a motorcycle near Ikere roundabout, bleeding from the hind leg and unable to stand.',
+      location_text: 'College Road, near Ikere roundabout, Ikerre-Ekiti',
+      lat: 7.4955, lng: 5.2315,
       urgency: 'CRITICAL',
       status: 'ASSIGNED',
       resolved: null,
@@ -715,8 +715,8 @@ Keep up with parasite control — deworming and tick/flea prevention — and fee
       assignedClinicIdx: null,
       animal_type: 'CATTLE',
       symptoms: 'Several cattle drooling heavily with blisters on the mouth and lameness — suspected FMD outbreak.',
-      location_text: 'Magboro grazing field, off Lagos-Ibadan Expressway',
-      lat: 6.7330, lng: 3.3820,
+      location_text: 'Igede grazing field, off Ado-Igede Road',
+      lat: 7.6690, lng: 5.1350,
       urgency: 'HIGH',
       status: 'OPEN',
       resolved: null,
@@ -726,8 +726,8 @@ Keep up with parasite control — deworming and tick/flea prevention — and fee
       assignedClinicIdx: 5,
       animal_type: 'POULTRY',
       symptoms: 'Sudden deaths in layer flock with greenish diarrhoea and twisted necks — possible Newcastle Disease.',
-      location_text: 'Ofada farm settlement, Obafemi Owode',
-      lat: 6.9018, lng: 3.4912,
+      location_text: 'Emure farm settlement, Emure-Ekiti',
+      lat: 7.4350, lng: 5.4680,
       urgency: 'HIGH',
       status: 'RESOLVED',
       resolved: 'Veterinarian attended, confirmed Newcastle Disease. Affected birds isolated, flock revaccinated, biosecurity reinforced.',
@@ -762,7 +762,7 @@ Keep up with parasite control — deworming and tick/flea prevention — and fee
   // Demo credentials summary
   // -------------------------------------------------------------------------
   console.log('\n========================================================');
-  console.log('  ✅ VetConnect Ibafo seed complete!');
+  console.log('  ✅ VetConnect Ekiti seed complete!');
   console.log('========================================================');
   console.log(`  Shared demo password for ALL accounts: ${DEMO_PASSWORD}\n`);
   console.log('  SUPER_ADMIN:');

@@ -6,7 +6,7 @@ const VAX_COLUMNS = `
   status, notes, created_at, updated_at
 `;
 
-// Static suggestion map for common vaccines in the Ibafo region.
+// Static suggestion map for common vaccines in the Ekiti region.
 export const VACCINE_SUGGESTIONS = {
   DOG: ['Anti-Rabies', 'DHPP'],
   CAT: ['Anti-Rabies', 'FVRCP'],

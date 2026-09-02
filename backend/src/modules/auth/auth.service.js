@@ -58,7 +58,7 @@ export async function forgotPassword({ email }) {
     await sendEmail({
       to: user.email,
       userId: user.id,
-      subject: 'Reset your VetConnect Ibafo password',
+      subject: 'Reset your VetConnect Ekiti password',
       html: `<p>Hello ${user.full_name},</p>
              <p>We received a request to reset your password. This link is valid for one hour:</p>
              <p><a href="${link}">${link}</a></p>

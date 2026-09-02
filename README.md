@@ -1,11 +1,11 @@
-# VetConnect Ibafo
+# VetConnect Ekiti
 
-> Online Veterinary Service Booking & Information System for Obafemi Owode LGA, Ogun State, Nigeria.
+> Online Veterinary Service Booking & Information System for Ekiti State, Nigeria.
 
-VetConnect Ibafo is a full-stack web application that connects animal owners and
-livestock farmers in the **Ibafo / Mowe / Magboro / Arepo / Ofada / Sagamu Road
-corridor** of Obafemi Owode Local Government Area with the veterinary clinics that
-serve them. Today, finding a vet in this fast-growing peri-urban corridor is a
+VetConnect Ekiti is a full-stack web application that connects animal owners and
+livestock farmers in **Ikerre-Ekiti, Ado-Ekiti, Igede, Ise, Emure, Ikole** and
+surrounding communities in Ekiti State with the veterinary clinics that
+serve them. Today, finding a vet across these communities is often a
 word-of-mouth exercise: there is no central directory, no way to book ahead, no
 reliable preventive-care information, and no fast path to help in an emergency.
 VetConnect solves this with a single platform that provides a **centralised,
@@ -110,7 +110,7 @@ each exposed under `/api`:
 ## Monorepo Structure
 
 ```
-vetconnect-ibafo/
+vetconnect-ekiti/
 ├── README.md                 # this file
 ├── docs/                     # architecture, ERD, API, deployment guides
 │   ├── ARCHITECTURE.md

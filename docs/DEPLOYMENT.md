@@ -1,4 +1,4 @@
-# Production Deployment Guide — VetConnect Ibafo
+# Production Deployment Guide — VetConnect Ekiti
 
 Reference topology:
 
@@ -73,7 +73,7 @@ From `backend/.env.example`:
 | `BCRYPT_ROUNDS` | e.g. `12` |
 | `SMTP_HOST` / `SMTP_PORT` / `SMTP_SECURE` | Email transport (e.g. `smtp.gmail.com` / `587` / `false`) |
 | `SMTP_USER` / `SMTP_PASS` | SMTP credentials (use an app password) |
-| `MAIL_FROM` | e.g. `VetConnect Ibafo <no-reply@vetconnect.ng>` |
+| `MAIL_FROM` | e.g. `VetConnect Ekiti <no-reply@vetconnect.ng>` |
 | `GOOGLE_MAPS_API_KEY` | Optional; Leaflet/OSM needs none |
 | `RATE_LIMIT_WINDOW_MS` | e.g. `900000` |
 | `RATE_LIMIT_MAX` | e.g. `300` |
@@ -143,7 +143,7 @@ The backend allows only origins listed in `CLIENT_URL` (comma-separated). After 
 frontend is live on Vercel, set the backend's `CLIENT_URL` to that exact domain, e.g.:
 
 ```
-CLIENT_URL=https://vetconnect-ibafo.vercel.app
+CLIENT_URL=https://vetconnect-ekiti.vercel.app
 ```
 
 Then redeploy/restart the backend so the new origin is honoured. (In non-production the

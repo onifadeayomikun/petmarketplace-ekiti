@@ -5,10 +5,10 @@ describe('haversineKm', () => {
     expect(haversineKm(6.69, 3.35, 6.69, 3.35)).toBeCloseTo(0, 5);
   });
 
-  test('computes a known distance (Ibafo ↔ Mowe ≈ 16-18 km)', () => {
-    const d = haversineKm(6.69, 3.35, 6.82, 3.43);
+  test('computes a known distance (Ikerre ↔ Ado-Ekiti ≈ 14-16 km)', () => {
+    const d = haversineKm(7.495, 5.231, 7.621, 5.221);
     expect(d).toBeGreaterThan(10);
-    expect(d).toBeLessThan(25);
+    expect(d).toBeLessThan(20);
   });
 
   test('is symmetric', () => {

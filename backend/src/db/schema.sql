@@ -1,7 +1,7 @@
 -- ============================================================================
--- VetConnect Ibafo — PostgreSQL Schema
+-- VetConnect Ekiti — PostgreSQL Schema
 -- Online Veterinary Service Booking and Information System
--- Obafemi Owode LGA, Ogun State, Nigeria
+-- Ekiti State, Nigeria
 -- ----------------------------------------------------------------------------
 -- Target: PostgreSQL 14+  (Supabase compatible)
 -- Conventions:
@@ -113,7 +113,7 @@ CREATE TABLE IF NOT EXISTS users (
   password_hash   VARCHAR(255) NOT NULL,
   role            user_role NOT NULL DEFAULT 'OWNER',
   avatar_url      TEXT,
-  location        VARCHAR(120),          -- e.g. Ibafo, Mowe, Magboro
+  location        VARCHAR(120),          -- e.g. Ikerre, Ado-Ekiti, Igede
   is_active       BOOLEAN NOT NULL DEFAULT TRUE,
   is_email_verified BOOLEAN NOT NULL DEFAULT FALSE,
   reset_token     VARCHAR(255),
@@ -138,7 +138,7 @@ CREATE TABLE IF NOT EXISTS clinics (
   slug                VARCHAR(200) UNIQUE,
   description         TEXT,
   address             VARCHAR(255) NOT NULL,
-  town                VARCHAR(120),          -- Ibafo / Mowe / Magboro / Arepo / Ofada
+  town                VARCHAR(120),          -- Ikerre / Ado-Ekiti / Igede / Ise / Emure / Ikole
   phone               VARCHAR(30),
   email               VARCHAR(255),
   operating_hours     JSONB DEFAULT '{}'::jsonb,    -- { mon:{open,close}, ... }

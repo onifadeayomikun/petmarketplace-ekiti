@@ -1,6 +1,6 @@
-# Architecture — VetConnect Ibafo
+# Architecture — VetConnect Ekiti
 
-This document describes the system architecture of VetConnect Ibafo: the high-level
+This document describes the system architecture of VetConnect Ekiti: the high-level
 topology, the layered backend, the frontend architecture, an end-to-end request
 lifecycle, the RBAC model, and the notification / reminder strategy.
 

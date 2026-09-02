@@ -121,7 +121,7 @@ export async function bookAppointment(owner, data) {
   await sendEmail({
     to: owner.email,
     userId: owner.id,
-    subject: 'Appointment request received — VetConnect Ibafo',
+    subject: 'Appointment request received — VetConnect Ekiti',
     text: `Hi ${owner.full_name},\n\nWe received your booking request for "${row.service}" at ${row.clinic_name} on ${dateStr} at ${String(row.start_time).slice(0, 5)}. Status: PENDING. You will be notified once the clinic confirms.`,
     payload: { appointment_id: row.id, type: 'booking_received' },
   }).catch(() => {});
@@ -355,9 +355,9 @@ export async function patchAppointment(id, user, input) {
     if (ownerUser) {
       const when = `${String(row.scheduled_date).slice(0, 10)} at ${String(row.start_time).slice(0, 5)}`;
       const subjects = {
-        confirm: 'Appointment confirmed — VetConnect Ibafo',
-        reject: 'Appointment declined — VetConnect Ibafo',
-        reschedule: 'Appointment rescheduled — VetConnect Ibafo',
+        confirm: 'Appointment confirmed — VetConnect Ekiti',
+        reject: 'Appointment declined — VetConnect Ekiti',
+        reschedule: 'Appointment rescheduled — VetConnect Ekiti',
       };
       const bodies = {
         confirm: `Hi ${ownerUser.full_name},\n\nYour appointment for "${row.service}" at ${row.clinic_name} on ${when} has been CONFIRMED.`,

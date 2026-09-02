@@ -145,7 +145,7 @@ export function ErrorState({ message, onRetry }: { message?: string; onRetry?: (
   );
 }
 
-export const TOWNS = ['Ibafo', 'Mowe', 'Magboro', 'Arepo', 'Ofada', 'Other'];
+export const TOWNS = ['Ikerre', 'Ado-Ekiti', 'Igede', 'Ise', 'Emure', 'Ikole', 'Other'];
 export const SPECIES: AnimalSpecies[] = ['DOG', 'CAT', 'POULTRY', 'GOAT', 'SHEEP', 'CATTLE', 'RABBIT', 'OTHER'];
 export const GENDERS = ['MALE', 'FEMALE', 'UNKNOWN'] as const;
 

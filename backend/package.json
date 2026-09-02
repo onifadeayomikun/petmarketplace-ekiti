@@ -1,10 +1,12 @@
 {
-  "name": "vetconnect-ibafo-backend",
+  "name": "vetconnect-ekiti-backend",
   "version": "1.0.0",
-  "description": "VetConnect Ibafo — REST API for online veterinary service booking and information system",
+  "description": "VetConnect Ekiti — REST API for online veterinary service booking and information system",
   "type": "module",
   "main": "src/server.js",
-  "engines": { "node": ">=18" },
+  "engines": {
+    "node": ">=18"
+  },
   "scripts": {
     "start": "node src/server.js",
     "dev": "nodemon src/server.js",
@@ -16,6 +18,8 @@
     "lint": "eslint src"
   },
   "dependencies": {
+    "@supabase/ssr": "^0.12.4",
+    "@supabase/supabase-js": "^2.112.3",
     "bcryptjs": "^2.4.3",
     "cors": "^2.8.5",
     "dotenv": "^16.4.5",
@@ -24,7 +28,7 @@
     "helmet": "^7.1.0",
     "jsonwebtoken": "^9.0.2",
     "morgan": "^1.10.0",
-    "nodemailer": "^6.9.14",
+    "nodemailer": "^9.0.5",
     "pg": "^8.12.0",
     "slugify": "^1.6.6",
     "zod": "^3.23.8"
@@ -39,6 +43,8 @@
   "jest": {
     "testEnvironment": "node",
     "transform": {},
-    "testMatch": ["**/tests/**/*.test.js"]
+    "testMatch": [
+      "**/tests/**/*.test.js"
+    ]
   }
 }

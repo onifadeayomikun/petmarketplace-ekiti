@@ -1,8 +1,8 @@
-# Render Blueprint for the VetConnect Ibafo API.
-# Deploy: push to GitHub, then "New + > Blueprint" in the Render dashboard.
+# Render Blueprint for the VetConnect Ekiti API.
+# Deploy: create a Blueprint instance from this repo on Render.
 services:
   - type: web
-    name: vetconnect-ibafo-api
+    name: vetconnect-ekiti-api
     runtime: node
     region: frankfurt
     plan: free
@@ -32,4 +32,4 @@ services:
       - key: SMTP_PASS
         sync: false
       - key: MAIL_FROM
-        value: "VetConnect Ibafo <no-reply@vetconnect.ng>"
+        value: "VetConnect Ekiti <no-reply@vetconnect.ng>"
