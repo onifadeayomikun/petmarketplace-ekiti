@@ -4,4 +4,6 @@
 // We import createApp (NOT server.js) so app.listen() is never called.
 import { createApp } from '../src/app.js';
 
-export default createApp();
+const app = createApp();
+
+export default app;
